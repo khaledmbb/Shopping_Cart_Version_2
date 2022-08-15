@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+body {
+  font-family: "Manrope", sans-serif !important;
+  color: #212529 !important;
+  background-color: #fdfdfd;
+}
+button,
+input,
+a,
+ul,
+::placeholder {
+  font-family: "Manrope", sans-serif !important;
+}
+ul {
+  padding: 0;
+}
+:root {
+  --color: #ff0000;
+  --txt-color: #212529;
+}
+.container {
+  padding: 0 200px;
+}
+nav .logo h1 {
+  font-weight: bolder;
+}
+nav .logo span {
+  color: var(--color);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .total-price-cart {
+  position: relative;
+}
+nav .total-price-cart .will-click {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+nav .total-price-cart .num-of-items p {
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+nav .popup {
+  background-color: white;
+  display: none;
+  position: absolute;
+  left: -292px;
+  top: 47px;
+  min-width: 350px;
+  box-shadow: 0 0 6px #00000033;
+  z-index: 10;
+}
+nav .total-price-cart .popup .body {
+  padding: 10px 25px;
+  font-size: 12px;
+  font-weight: 500;
+}
+nav .price-is {
+  padding: 0px 25px 10px 25px;
+}
+nav .price-is p {
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+nav .price-is button {
+  font-size: 14px;
+  margin: 10px 0;
+  width: 100%;
+  font-weight: bolder;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: #212529;
+  cursor: pointer;
+}
+.category {
+  align-items: center;
+  margin: 40px 0 40px 0;
+}
+.category ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 20px;
+}
+.category ul li {
+  cursor: pointer;
+  color: #212529cc;
+}
+.category ul .active {
+  color: #212529;
+}
+.boxes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+.boxes .box {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  background-color: white;
+  flex-basis: calc((100% / 4) - 40px);
+  text-align: center;
+}
+.boxes .box .before {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+.boxes .box img {
+  max-width: 100%;
+}
+.boxes .box .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 10px 10px;
+  border-top: 1px solid #0000001a;
+}
+.boxes .box .info p {
+  font-weight: 800;
+  font-size: 13px;
+  margin: 0;
+}
+.boxes .box .info .price p {
+  color: var(--color);
+}
+.boxes .box .info .cart {
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 120px;
+  }
+  .boxes .box {
+    flex-basis: calc((100% / 3) - 37px);
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 80px;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 0 20px;
+  }
+  .boxes .box {
+    flex-basis: calc((100% / 2) - 34px);
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+  }
+  .boxes .box {
+    flex-basis: 100%;
+  }
+}
+.child {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.child:not(:last-child) {
+  margin-bottom: 10px;
+}
+.child img {
+  width: 70px;
+  height: 70px;
+  flex-basis: 25%;
+}
+.child .flex {
+  flex-basis: 50%;
+}
+.child .delete {
+  flex-basis: 25%;
+  cursor: pointer;
+}
+.child .flex p {
+  margin: 0;
+}
+.child .flex p:nth-child(2) {
+  margin-top: 5px;
+  color: var(--color);
+}
+.child .flex p:nth-child(1) {
+  font-weight: 600;
+}
+.cont-1.remove {
+  display: none;
+}
+.cont-2 {
+  display: none;
+}
+.pay .items {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.pay .items .item {
+  flex-basis: 100%;
+}
+.pay .items .item {
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.pay .items .item.cat {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+  background-color: #212529;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 0;
+  border-radius: 1px;
+}
+.pay .items .item:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.pay .items .item:last-child {
+  border-bottom: 2px solid #212121;
+}
+.pay .items .item .name {
+  flex-basis: calc((100% / 5) + 20px);
+}
+.pay .items .item .price {
+  flex-basis: calc((100% / 5) + 20px);
+}
+.pay .items .item .quantity {
+  flex-basis: calc((100% / 5) + 20px);
+}
+.pay .items .item .trash {
+  cursor: pointer;
+  flex-basis: calc((100% / 5) - 80px);
+}
+.pay .items .item .image {
+  flex-basis: calc((100% / 5) + 20px);
+}
+.pay .items .item .image img {
+  width: 80%;
+}
+.pay button {
+  font-size: 14px;
+  width: 25%;
+  font-weight: bolder;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 35px;
+  background-color: #212529;
+  cursor: pointer;
+}
+.end {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.end p {
+  font-size: 14px;
+  font-weight: 600;
+}
+footer {
+  margin-top: 120px;
+  padding: 20px 0;
+  background-color: #212529;
+}
+footer p {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
